@@ -1,0 +1,440 @@
+[0m17:39:55.110396 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10253f400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1050dfc10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1050dfdf0>]}
+
+
+============================== 17:39:55.113006 | 221cd356-3880-46e7-9f85-957c70aeb38a ==============================
+[0m17:39:55.113006 [info ] [MainThread]: Running with dbt=1.8.8
+[0m17:39:55.113375 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/Users/kubaw/Documents/workspace-git/dbt_glow_demo/logs', 'fail_fast': 'False', 'profiles_dir': '/Users/kubaw/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m17:39:55.121483 [info ] [MainThread]: dbt version: 1.8.8
+[0m17:39:55.121771 [info ] [MainThread]: python version: 3.9.6
+[0m17:39:55.121997 [info ] [MainThread]: python path: /Library/Developer/CommandLineTools/usr/bin/python3
+[0m17:39:55.122215 [info ] [MainThread]: os info: macOS-15.0.1-arm64-arm-64bit
+[0m17:39:55.164427 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m17:39:55.164758 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m17:39:55.165000 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m17:39:55.851986 [info ] [MainThread]: Using profiles dir at /Users/kubaw/.dbt
+[0m17:39:55.852338 [info ] [MainThread]: Using profiles.yml file at /Users/kubaw/.dbt/profiles.yml
+[0m17:39:55.852575 [info ] [MainThread]: Using dbt_project.yml file at /Users/kubaw/Documents/workspace-git/dbt_glow_demo/dbt_project.yml
+[0m17:39:55.852813 [info ] [MainThread]: adapter type: databricks
+[0m17:39:55.853036 [info ] [MainThread]: adapter version: 1.8.7
+[0m17:39:55.908210 [info ] [MainThread]: Configuration:
+[0m17:39:55.908509 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m17:39:55.908743 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m17:39:55.908969 [info ] [MainThread]: Required dependencies:
+[0m17:39:55.909234 [debug] [MainThread]: Executing "git --help"
+[0m17:39:55.920988 [debug] [MainThread]: STDOUT: "b'u\xc5\xbcycie: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nOto cz\xc4\x99ste polecenia Gita u\xc5\xbcywane w r\xc3\xb3\xc5\xbcnych sytuacjach:\n\nprzyszykuj obszar do pracy (zobacz te\xc5\xbc: git help tutorial)\n   clone     Sklonuj repozytorium do nowego katalogu\n   init      Utw\xc3\xb3rz puste repozytorium Gita lub przeinicjuj istniej\xc4\x85ce\n\npracuj nad bie\xc5\xbc\xc4\x85c\xc4\x85 zmian\xc4\x85 (zobacz te\xc5\xbc: git help everyday)\n   add       Dodaj zawarto\xc5\x9b\xc4\x87 pliku do indeksu\n   mv        Przenie\xc5\x9b plik, katalog lub dowi\xc4\x85zanie albo zmie\xc5\x84 jego nazw\xc4\x99\n   restore   Przywr\xc3\xb3\xc4\x87 pliki drzewa roboczego\n   rm        Usu\xc5\x84 pliki z drzewa roboczego i z indeksu\n\nbadaj histori\xc4\x99 i stan (zobacz te\xc5\xbc: git help revisions)\n   bisect    U\xc5\xbcyj wyszukiwania binarnego, aby znale\xc5\xba\xc4\x87 zapis, kt\xc3\xb3ry wprowadzi\xc5\x82 b\xc5\x82\xc4\x99dy\n   diff      Poka\xc5\xbc zmiany pomi\xc4\x99dzy zapisami, zapisem i drzewem roboczym itp.\n   grep      Wypisz wiersze pasuj\xc4\x85ce do wzorca\n   log       Poka\xc5\xbc dziennik zapis\xc3\xb3w\n   show      Pokazuj r\xc3\xb3\xc5\xbcne typy obiekt\xc3\xb3w\n   status    Poka\xc5\xbc stan drzewa roboczego\n\nposzerzaj, oznaczaj i dostosowuj wsp\xc3\xb3ln\xc4\x85 histori\xc4\x99\n   branch    Wypisz, utw\xc3\xb3rz lub usu\xc5\x84 ga\xc5\x82\xc4\x99zie\n   commit    Zapisz zmiany w repozytorium\n   merge     Po\xc5\x82\xc4\x85cz ze sob\xc4\x85 dwie lub wi\xc4\x99cej historii rozwoju\n   rebase    Ponownie zastosuj zapisy na czubku innej ga\xc5\x82\xc4\x99zi\n   reset     Zresetuj bie\xc5\xbc\xc4\x85cy HEAD do podanego stanu\n   switch    Prze\xc5\x82\xc4\x85czaj ga\xc5\x82\xc4\x99zie\n   tag       Utw\xc3\xb3rz, wypisz, usu\xc5\x84 lub zweryfikuj obiekt tagu podpisany GPG\n\nwsp\xc3\xb3\xc5\x82pracuj (zobacz te\xc5\xbc: git help workflows)\n   fetch     Pobierz obiekty i referencje z innego repozytorium\n   pull      Pobierz i zintegruj zmiany z innego repozytorium lub lokalnej ga\xc5\x82\xc4\x99zi\n   push      Zaktualizuj zdalne referencje razem z przypisanymi obiektami\n\n\xe2\x80\x9egit help -a\xe2\x80\x9d i \xe2\x80\x9egit help -g\xe2\x80\x9d wypisuj\xc4\x85 dost\xc4\x99pne polecenia gita i wyja\xc5\x9bnienia\nniekt\xc3\xb3rych koncepcji.  Zobacz \xe2\x80\x9egit help <polecenie>\xe2\x80\x9d lub \xe2\x80\x9egit help <poj\xc4\x99cie>\xe2\x80\x9d,\naby poczyta\xc4\x87 o konkretnym poleceniu lub poj\xc4\x99ciu.\nW \xe2\x80\x9egit help git\xe2\x80\x9d znajdziesz przegl\xc4\x85d systemu.\n'"
+[0m17:39:55.921604 [debug] [MainThread]: STDERR: "b''"
+[0m17:39:55.921854 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m17:39:55.922121 [info ] [MainThread]: Connection:
+[0m17:39:55.922393 [info ] [MainThread]:   host: adb-1665934966197045.5.azuredatabricks.net
+[0m17:39:55.922608 [info ] [MainThread]:   http_path: /sql/1.0/warehouses/7f7665d77c88cfdd
+[0m17:39:55.922816 [info ] [MainThread]:   catalog: datamass_unitycatalog_datalake
+[0m17:39:55.923023 [info ] [MainThread]:   schema: dbt
+[0m17:39:55.923422 [info ] [MainThread]: Registered adapter: databricks=1.8.7
+[0m17:39:55.926819 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5231474960, session-id=None, name=debug, idle-time=0s, acquire-count=0, language=None, thread-identifier=(12084, 8471949888), compute-name=) - Creating connection
+[0m17:39:55.927360 [debug] [MainThread]: Acquiring new databricks connection 'debug'
+[0m17:39:55.927625 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5231474960, session-id=None, name=debug, idle-time=7.152557373046875e-07s, acquire-count=1, language=None, thread-identifier=(12084, 8471949888), compute-name=) - Acquired connection on thread (12084, 8471949888), using default compute resource
+[0m17:39:55.927899 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5231474960, session-id=None, name=debug, idle-time=0.0002849102020263672s, acquire-count=1, language=None, thread-identifier=(12084, 8471949888), compute-name=) - Checking idleness
+[0m17:39:55.928142 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5231474960, session-id=None, name=debug, idle-time=0.0005319118499755859s, acquire-count=1, language=None, thread-identifier=(12084, 8471949888), compute-name=) - Retrieving connection
+[0m17:39:55.928379 [debug] [MainThread]: Using databricks connection "debug"
+[0m17:39:55.928824 [debug] [MainThread]: On debug: select 1 as id
+[0m17:39:55.929050 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:39:56.219797 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5231474960, session-id=01ef9939-17b2-1c22-96ce-a098a49a9769, name=debug, idle-time=1.1920928955078125e-05s, acquire-count=1, language=None, thread-identifier=(12084, 8471949888), compute-name=) - Connection created
+[0m17:39:56.221182 [debug] [MainThread]: Databricks adapter: Cursor(session-id=01ef9939-17b2-1c22-96ce-a098a49a9769, command-id=Unknown) - Created cursor
+[0m17:39:56.547320 [debug] [MainThread]: SQL status: OK in 0.620 seconds
+[0m17:39:56.550377 [debug] [MainThread]: Databricks adapter: Cursor(session-id=01ef9939-17b2-1c22-96ce-a098a49a9769, command-id=01ef9939-17c1-182e-b394-036a96d7034e) - Closing cursor
+[0m17:39:56.551770 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5231474960, session-id=01ef9939-17b2-1c22-96ce-a098a49a9769, name=debug, idle-time=1.1920928955078125e-05s, acquire-count=0, language=None, thread-identifier=(12084, 8471949888), compute-name=) - Released connection
+[0m17:39:56.552621 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m17:39:56.553409 [info ] [MainThread]: [32mAll checks passed![0m
+[0m17:39:56.557366 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 1.4892464, "process_user_time": 2.662903, "process_kernel_time": 0.429711, "process_mem_max_rss": "195477504", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m17:39:56.558646 [debug] [MainThread]: Command `dbt debug` succeeded at 17:39:56.558488 after 1.49 seconds
+[0m17:39:56.559426 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m17:39:56.560089 [debug] [MainThread]: On debug: Close
+[0m17:39:56.560765 [debug] [MainThread]: Databricks adapter: Connection(session-id=01ef9939-17b2-1c22-96ce-a098a49a9769) - Closing connection
+[0m17:39:56.647992 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10253f400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x137cbc1f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x137c78fd0>]}
+[0m17:39:56.649733 [debug] [MainThread]: Flushing usage events
+[0m17:41:15.423626 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102412520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1043e7520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1043e7340>]}
+
+
+============================== 17:41:15.427113 | 0ebec576-01eb-4c4d-bd14-e7c4c19d39d0 ==============================
+[0m17:41:15.427113 [info ] [MainThread]: Running with dbt=1.8.8
+[0m17:41:15.427610 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/kubaw/.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/Users/kubaw/Documents/workspace-git/dbt_glow_demo/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt test', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m17:41:15.475274 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m17:41:15.475755 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m17:41:15.476059 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m17:41:16.418234 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0ebec576-01eb-4c4d-bd14-e7c4c19d39d0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103212460>]}
+[0m17:41:16.453905 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0ebec576-01eb-4c4d-bd14-e7c4c19d39d0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10424cee0>]}
+[0m17:41:16.454315 [info ] [MainThread]: Registered adapter: databricks=1.8.7
+[0m17:41:16.468363 [debug] [MainThread]: checksum: ec53e341a936509427e16df1c646386a84befec52c1957e3f4359fbc36fc93f5, vars: {}, profile: , target: , version: 1.8.8
+[0m17:41:16.468947 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m17:41:16.469226 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '0ebec576-01eb-4c4d-bd14-e7c4c19d39d0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11fefc2b0>]}
+[0m17:41:17.628810 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.dbt_glow_demo.example
+[0m17:41:17.635759 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0ebec576-01eb-4c4d-bd14-e7c4c19d39d0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12cc03d60>]}
+[0m17:41:17.694892 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0ebec576-01eb-4c4d-bd14-e7c4c19d39d0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12ce77940>]}
+[0m17:41:17.695264 [info ] [MainThread]: Found 1 source, 596 macros
+[0m17:41:17.695517 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0ebec576-01eb-4c4d-bd14-e7c4c19d39d0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1037cf970>]}
+[0m17:41:17.696162 [info ] [MainThread]: 
+[0m17:41:17.696413 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m17:41:17.696731 [debug] [MainThread]: Command end result
+[0m17:41:17.759913 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 2.3865967, "process_user_time": 3.739378, "process_kernel_time": 0.356681, "process_mem_max_rss": "194985984", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m17:41:17.760352 [debug] [MainThread]: Command `dbt test` succeeded at 17:41:17.760301 after 2.39 seconds
+[0m17:41:17.760689 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102412520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12caa1310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12c941ca0>]}
+[0m17:41:17.760986 [debug] [MainThread]: Flushing usage events
+[0m17:41:26.648284 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105da1550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108ab35b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108ab33d0>]}
+
+
+============================== 17:41:26.650890 | de11477b-84e9-47ea-bc31-39e7fc74cc84 ==============================
+[0m17:41:26.650890 [info ] [MainThread]: Running with dbt=1.8.8
+[0m17:41:26.651260 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/kubaw/.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/Users/kubaw/Documents/workspace-git/dbt_glow_demo/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m17:41:26.686769 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m17:41:26.687129 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m17:41:26.687396 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m17:41:27.391944 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'de11477b-84e9-47ea-bc31-39e7fc74cc84', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12ef9e670>]}
+[0m17:41:27.427444 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'de11477b-84e9-47ea-bc31-39e7fc74cc84', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1089186d0>]}
+[0m17:41:27.427861 [info ] [MainThread]: Registered adapter: databricks=1.8.7
+[0m17:41:27.441581 [debug] [MainThread]: checksum: ec53e341a936509427e16df1c646386a84befec52c1957e3f4359fbc36fc93f5, vars: {}, profile: , target: , version: 1.8.8
+[0m17:41:27.508080 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m17:41:27.508386 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m17:41:27.508685 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.dbt_glow_demo.example
+[0m17:41:27.516678 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'de11477b-84e9-47ea-bc31-39e7fc74cc84', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1442b3130>]}
+[0m17:41:27.566650 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'de11477b-84e9-47ea-bc31-39e7fc74cc84', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1442b3d90>]}
+[0m17:41:27.566996 [info ] [MainThread]: Found 1 source, 596 macros
+[0m17:41:27.567253 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'de11477b-84e9-47ea-bc31-39e7fc74cc84', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1442a39d0>]}
+[0m17:41:27.567947 [info ] [MainThread]: 
+[0m17:41:27.568189 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m17:41:27.569148 [debug] [MainThread]: Command end result
+[0m17:41:27.587967 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 0.9829196, "process_user_time": 2.806502, "process_kernel_time": 0.405569, "process_mem_max_rss": "198541312", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m17:41:27.588362 [debug] [MainThread]: Command `dbt run` succeeded at 17:41:27.588315 after 0.98 seconds
+[0m17:41:27.588631 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105da1550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12edb66d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1089186d0>]}
+[0m17:41:27.588882 [debug] [MainThread]: Flushing usage events
+[0m17:42:46.078249 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105d1e4f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107cf33d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107cf31f0>]}
+
+
+============================== 17:42:46.080967 | 5d8bf8cb-39f1-40d4-9e1e-71ac2456c4c8 ==============================
+[0m17:42:46.080967 [info ] [MainThread]: Running with dbt=1.8.8
+[0m17:42:46.081350 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/kubaw/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': '/Users/kubaw/Documents/workspace-git/dbt_glow_demo/logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt test', 'send_anonymous_usage_stats': 'True'}
+[0m17:42:46.122555 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m17:42:46.122888 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m17:42:46.123134 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m17:42:46.922877 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5d8bf8cb-39f1-40d4-9e1e-71ac2456c4c8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12c6974c0>]}
+[0m17:42:46.962865 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '5d8bf8cb-39f1-40d4-9e1e-71ac2456c4c8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1076e6190>]}
+[0m17:42:46.963328 [info ] [MainThread]: Registered adapter: databricks=1.8.7
+[0m17:42:46.985114 [debug] [MainThread]: checksum: ec53e341a936509427e16df1c646386a84befec52c1957e3f4359fbc36fc93f5, vars: {}, profile: , target: , version: 1.8.8
+[0m17:42:47.027036 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
+[0m17:42:47.027447 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '5d8bf8cb-39f1-40d4-9e1e-71ac2456c4c8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106b36070>]}
+[0m17:42:47.937075 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.dbt_glow_demo.staging
+[0m17:42:47.944053 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '5d8bf8cb-39f1-40d4-9e1e-71ac2456c4c8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12cacdb80>]}
+[0m17:42:48.001254 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '5d8bf8cb-39f1-40d4-9e1e-71ac2456c4c8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12cd53910>]}
+[0m17:42:48.001624 [info ] [MainThread]: Found 1 source, 596 macros
+[0m17:42:48.001888 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5d8bf8cb-39f1-40d4-9e1e-71ac2456c4c8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107ce6a90>]}
+[0m17:42:48.002491 [info ] [MainThread]: 
+[0m17:42:48.002752 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m17:42:48.003076 [debug] [MainThread]: Command end result
+[0m17:42:48.022307 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 1.987518, "process_user_time": 3.752864, "process_kernel_time": 0.411921, "process_mem_max_rss": "197509120", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m17:42:48.022683 [debug] [MainThread]: Command `dbt test` succeeded at 17:42:48.022634 after 1.99 seconds
+[0m17:42:48.022963 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105d1e4f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1076e08e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1076e6190>]}
+[0m17:42:48.023229 [debug] [MainThread]: Flushing usage events
+[0m17:43:24.472549 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102205490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1041db700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1041db520>]}
+
+
+============================== 17:43:24.475248 | 3b5d9cda-3923-436c-8fe3-9de8a14459a9 ==============================
+[0m17:43:24.475248 [info ] [MainThread]: Running with dbt=1.8.8
+[0m17:43:24.475630 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/Users/kubaw/Documents/workspace-git/dbt_glow_demo/logs', 'profiles_dir': '/Users/kubaw/.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt test', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m17:43:24.516999 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m17:43:24.517336 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m17:43:24.517578 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m17:43:25.323293 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3b5d9cda-3923-436c-8fe3-9de8a14459a9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1041ce0a0>]}
+[0m17:43:25.358993 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3b5d9cda-3923-436c-8fe3-9de8a14459a9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103bd05b0>]}
+[0m17:43:25.359418 [info ] [MainThread]: Registered adapter: databricks=1.8.7
+[0m17:43:25.373511 [debug] [MainThread]: checksum: ec53e341a936509427e16df1c646386a84befec52c1957e3f4359fbc36fc93f5, vars: {}, profile: , target: , version: 1.8.8
+[0m17:43:25.447549 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m17:43:25.447909 [debug] [MainThread]: Partial parsing: added file: dbt_glow_demo://models/staging/stg_products.sql
+[0m17:43:25.610076 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3b5d9cda-3923-436c-8fe3-9de8a14459a9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x127c51f10>]}
+[0m17:43:25.681868 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3b5d9cda-3923-436c-8fe3-9de8a14459a9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x127f6eb20>]}
+[0m17:43:25.682286 [info ] [MainThread]: Found 1 model, 1 source, 596 macros
+[0m17:43:25.682565 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3b5d9cda-3923-436c-8fe3-9de8a14459a9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1266fac40>]}
+[0m17:43:25.683312 [info ] [MainThread]: 
+[0m17:43:25.683583 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m17:43:25.683931 [debug] [MainThread]: Command end result
+[0m17:43:25.704976 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 1.2758338, "process_user_time": 2.850196, "process_kernel_time": 0.607349, "process_mem_max_rss": "206110720", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m17:43:25.705447 [debug] [MainThread]: Command `dbt test` succeeded at 17:43:25.705394 after 1.28 seconds
+[0m17:43:25.705761 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x102205490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1266fa670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103bc8940>]}
+[0m17:43:25.706071 [debug] [MainThread]: Flushing usage events
+[0m17:43:30.526602 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103e1e550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105df38b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105df36d0>]}
+
+
+============================== 17:43:30.529202 | 5030a1f8-906c-454f-b2a8-de978afecb03 ==============================
+[0m17:43:30.529202 [info ] [MainThread]: Running with dbt=1.8.8
+[0m17:43:30.529571 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/kubaw/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/Users/kubaw/Documents/workspace-git/dbt_glow_demo/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt run', 'send_anonymous_usage_stats': 'True'}
+[0m17:43:30.568379 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m17:43:30.568710 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m17:43:30.568959 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m17:43:31.212930 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5030a1f8-906c-454f-b2a8-de978afecb03', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105e9d220>]}
+[0m17:43:31.248902 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '5030a1f8-906c-454f-b2a8-de978afecb03', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x127699a00>]}
+[0m17:43:31.249310 [info ] [MainThread]: Registered adapter: databricks=1.8.7
+[0m17:43:31.261973 [debug] [MainThread]: checksum: ec53e341a936509427e16df1c646386a84befec52c1957e3f4359fbc36fc93f5, vars: {}, profile: , target: , version: 1.8.8
+[0m17:43:31.341218 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m17:43:31.341516 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m17:43:31.361939 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '5030a1f8-906c-454f-b2a8-de978afecb03', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1323900d0>]}
+[0m17:43:31.421563 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '5030a1f8-906c-454f-b2a8-de978afecb03', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x132390b20>]}
+[0m17:43:31.421903 [info ] [MainThread]: Found 1 model, 1 source, 596 macros
+[0m17:43:31.422156 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5030a1f8-906c-454f-b2a8-de978afecb03', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1323914c0>]}
+[0m17:43:31.422883 [info ] [MainThread]: 
+[0m17:43:31.423299 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5137565488, session-id=None, name=master, idle-time=0s, acquire-count=0, language=None, thread-identifier=(12888, 8471949888), compute-name=) - Creating connection
+[0m17:43:31.423545 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m17:43:31.423783 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5137565488, session-id=None, name=master, idle-time=1.1920928955078125e-06s, acquire-count=1, language=None, thread-identifier=(12888, 8471949888), compute-name=) - Acquired connection on thread (12888, 8471949888), using default compute resource
+[0m17:43:31.424306 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=5137631792, session-id=None, name=list_datamass_unitycatalog_datalake, idle-time=0s, acquire-count=0, language=None, thread-identifier=(12888, 6152253440), compute-name=) - Creating connection
+[0m17:43:31.424602 [debug] [ThreadPool]: Acquiring new databricks connection 'list_datamass_unitycatalog_datalake'
+[0m17:43:31.424849 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=5137631792, session-id=None, name=list_datamass_unitycatalog_datalake, idle-time=9.5367431640625e-07s, acquire-count=1, language=None, thread-identifier=(12888, 6152253440), compute-name=) - Acquired connection on thread (12888, 6152253440), using default compute resource
+[0m17:43:31.425107 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=5137631792, session-id=None, name=list_datamass_unitycatalog_datalake, idle-time=0.0002639293670654297s, acquire-count=1, language=None, thread-identifier=(12888, 6152253440), compute-name=) - Checking idleness
+[0m17:43:31.425341 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=5137631792, session-id=None, name=list_datamass_unitycatalog_datalake, idle-time=0.0004978179931640625s, acquire-count=1, language=None, thread-identifier=(12888, 6152253440), compute-name=) - Retrieving connection
+[0m17:43:31.425555 [debug] [ThreadPool]: Using databricks connection "list_datamass_unitycatalog_datalake"
+[0m17:43:31.425766 [debug] [ThreadPool]: On list_datamass_unitycatalog_datalake: GetSchemas(database=datamass_unitycatalog_datalake, schema=None)
+[0m17:43:31.425975 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:43:31.703894 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=5137631792, session-id=01ef9939-9827-126a-8b3f-8065d422aa70, name=list_datamass_unitycatalog_datalake, idle-time=9.059906005859375e-06s, acquire-count=1, language=None, thread-identifier=(12888, 6152253440), compute-name=) - Connection created
+[0m17:43:31.706134 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01ef9939-9827-126a-8b3f-8065d422aa70, command-id=Unknown) - Created cursor
+[0m17:43:32.210199 [debug] [ThreadPool]: SQL status: OK in 0.780 seconds
+[0m17:43:32.220662 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01ef9939-9827-126a-8b3f-8065d422aa70, command-id=01ef9939-9835-1671-940f-8cf380fb4fa4) - Closing cursor
+[0m17:43:32.221673 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=5137631792, session-id=01ef9939-9827-126a-8b3f-8065d422aa70, name=list_datamass_unitycatalog_datalake, idle-time=4.76837158203125e-06s, acquire-count=0, language=None, thread-identifier=(12888, 6152253440), compute-name=) - Released connection
+[0m17:43:32.223383 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=5137631792, session-id=01ef9939-9827-126a-8b3f-8065d422aa70, name=list_datamass_unitycatalog_datalake, idle-time=0.0017499923706054688s, acquire-count=0, language=None, thread-identifier=(12888, 6152253440), compute-name=) - Checking idleness
+[0m17:43:32.223997 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_datamass_unitycatalog_datalake, now list_datamass_unitycatalog_datalake_dbt)
+[0m17:43:32.224569 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=5137631792, session-id=01ef9939-9827-126a-8b3f-8065d422aa70, name=list_datamass_unitycatalog_datalake_dbt, idle-time=0.0029449462890625s, acquire-count=0, language=None, thread-identifier=(12888, 6152253440), compute-name=) - Reusing connection previously named list_datamass_unitycatalog_datalake
+[0m17:43:32.225139 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=5137631792, session-id=01ef9939-9827-126a-8b3f-8065d422aa70, name=list_datamass_unitycatalog_datalake_dbt, idle-time=0.0035190582275390625s, acquire-count=1, language=None, thread-identifier=(12888, 6152253440), compute-name=) - Acquired connection on thread (12888, 6152253440), using default compute resource
+[0m17:43:32.239259 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=5137631792, session-id=01ef9939-9827-126a-8b3f-8065d422aa70, name=list_datamass_unitycatalog_datalake_dbt, idle-time=0.01764082908630371s, acquire-count=1, language=None, thread-identifier=(12888, 6152253440), compute-name=) - Checking idleness
+[0m17:43:32.239741 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=5137631792, session-id=01ef9939-9827-126a-8b3f-8065d422aa70, name=list_datamass_unitycatalog_datalake_dbt, idle-time=0.0181429386138916s, acquire-count=1, language=None, thread-identifier=(12888, 6152253440), compute-name=) - Retrieving connection
+[0m17:43:32.240162 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=5137631792, session-id=01ef9939-9827-126a-8b3f-8065d422aa70, name=list_datamass_unitycatalog_datalake_dbt, idle-time=0.01856684684753418s, acquire-count=1, language=None, thread-identifier=(12888, 6152253440), compute-name=) - Checking idleness
+[0m17:43:32.240561 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=5137631792, session-id=01ef9939-9827-126a-8b3f-8065d422aa70, name=list_datamass_unitycatalog_datalake_dbt, idle-time=0.018968820571899414s, acquire-count=1, language=None, thread-identifier=(12888, 6152253440), compute-name=) - Retrieving connection
+[0m17:43:32.240938 [debug] [ThreadPool]: Spark adapter: NotImplemented: add_begin_query
+[0m17:43:32.241300 [debug] [ThreadPool]: Using databricks connection "list_datamass_unitycatalog_datalake_dbt"
+[0m17:43:32.241714 [debug] [ThreadPool]: On list_datamass_unitycatalog_datalake_dbt: /* {"app": "dbt", "dbt_version": "1.8.8", "dbt_databricks_version": "1.8.7", "databricks_sql_connector_version": "3.1.2", "profile_name": "dbt_glow_demo", "target_name": "dev", "connection_name": "list_datamass_unitycatalog_datalake_dbt"} */
+select
+      table_name,
+      if(table_type in ('EXTERNAL', 'MANAGED', 'MANAGED_SHALLOW_CLONE', 'EXTERNAL_SHALLOW_CLONE'), 'table', lower(table_type)) as table_type,
+      lower(data_source_format) as file_format,
+      table_owner
+    from `system`.`information_schema`.`tables`
+    where table_catalog = 'datamass_unitycatalog_datalake'
+      and table_schema = 'dbt'
+    
+  
+[0m17:43:32.242136 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01ef9939-9827-126a-8b3f-8065d422aa70, command-id=Unknown) - Created cursor
+[0m17:43:32.897198 [debug] [ThreadPool]: SQL status: OK in 0.650 seconds
+[0m17:43:32.905666 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01ef9939-9827-126a-8b3f-8065d422aa70, command-id=01ef9939-9887-1e05-9e70-4f6e58bcbe82) - Closing cursor
+[0m17:43:32.907167 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(id=5137631792, session-id=01ef9939-9827-126a-8b3f-8065d422aa70, name=list_datamass_unitycatalog_datalake_dbt, idle-time=9.059906005859375e-06s, acquire-count=0, language=None, thread-identifier=(12888, 6152253440), compute-name=) - Released connection
+[0m17:43:32.908642 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5030a1f8-906c-454f-b2a8-de978afecb03', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12775d100>]}
+[0m17:43:32.909779 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5137565488, session-id=None, name=master, idle-time=1.4859180450439453s, acquire-count=1, language=None, thread-identifier=(12888, 8471949888), compute-name=) - Checking idleness
+[0m17:43:32.910501 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5137565488, session-id=None, name=master, idle-time=1.4866650104522705s, acquire-count=1, language=None, thread-identifier=(12888, 8471949888), compute-name=) - Retrieving connection
+[0m17:43:32.911642 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5137565488, session-id=None, name=master, idle-time=1.4877099990844727s, acquire-count=1, language=None, thread-identifier=(12888, 8471949888), compute-name=) - Checking idleness
+[0m17:43:32.912638 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5137565488, session-id=None, name=master, idle-time=1.4887630939483643s, acquire-count=1, language=None, thread-identifier=(12888, 8471949888), compute-name=) - Retrieving connection
+[0m17:43:32.913486 [debug] [MainThread]: Spark adapter: NotImplemented: add_begin_query
+[0m17:43:32.914305 [debug] [MainThread]: Spark adapter: NotImplemented: commit
+[0m17:43:32.915078 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5137565488, session-id=None, name=master, idle-time=3.0994415283203125e-06s, acquire-count=0, language=None, thread-identifier=(12888, 8471949888), compute-name=) - Released connection
+[0m17:43:32.915972 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m17:43:32.916653 [info ] [MainThread]: 
+[0m17:43:32.920217 [debug] [Thread-1  ]: Began running node model.dbt_glow_demo.stg_products
+[0m17:43:32.921315 [info ] [Thread-1  ]: 1 of 1 START sql view model dbt.stg_products ................................... [RUN]
+[0m17:43:32.922367 [debug] [Thread-1  ]: Databricks adapter: DatabricksDBTConnection(id=5137631792, session-id=01ef9939-9827-126a-8b3f-8065d422aa70, name=list_datamass_unitycatalog_datalake_dbt, idle-time=0.015166997909545898s, acquire-count=0, language=None, thread-identifier=(12888, 6152253440), compute-name=) - Checking idleness
+[0m17:43:32.922986 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_datamass_unitycatalog_datalake_dbt, now model.dbt_glow_demo.stg_products)
+[0m17:43:32.923630 [debug] [Thread-1  ]: Databricks adapter: DatabricksDBTConnection(id=5137631792, session-id=01ef9939-9827-126a-8b3f-8065d422aa70, name=model.dbt_glow_demo.stg_products, idle-time=0.016471147537231445s, acquire-count=0, language=None, thread-identifier=(12888, 6152253440), compute-name=) - Reusing connection previously named list_datamass_unitycatalog_datalake_dbt
+[0m17:43:32.924272 [debug] [Thread-1  ]: Databricks adapter: DatabricksDBTConnection(id=5137631792, session-id=01ef9939-9827-126a-8b3f-8065d422aa70, name=model.dbt_glow_demo.stg_products, idle-time=0.017117977142333984s, acquire-count=1, language=sql, thread-identifier=(12888, 6152253440), compute-name=) - Acquired connection on thread (12888, 6152253440), using default compute resource for model '`datamass_unitycatalog_datalake`.`dbt`.`stg_products`'
+[0m17:43:32.924874 [debug] [Thread-1  ]: Began compiling node model.dbt_glow_demo.stg_products
+[0m17:43:32.936800 [debug] [Thread-1  ]: Writing injected SQL for node "model.dbt_glow_demo.stg_products"
+[0m17:43:32.938178 [debug] [Thread-1  ]: Began executing node model.dbt_glow_demo.stg_products
+[0m17:43:32.963403 [debug] [Thread-1  ]: Writing runtime sql for node "model.dbt_glow_demo.stg_products"
+[0m17:43:32.964279 [debug] [Thread-1  ]: Databricks adapter: DatabricksDBTConnection(id=5137631792, session-id=01ef9939-9827-126a-8b3f-8065d422aa70, name=model.dbt_glow_demo.stg_products, idle-time=0.0571751594543457s, acquire-count=1, language=sql, thread-identifier=(12888, 6152253440), compute-name=) - Checking idleness
+[0m17:43:32.964651 [debug] [Thread-1  ]: Databricks adapter: DatabricksDBTConnection(id=5137631792, session-id=01ef9939-9827-126a-8b3f-8065d422aa70, name=model.dbt_glow_demo.stg_products, idle-time=0.05756425857543945s, acquire-count=1, language=sql, thread-identifier=(12888, 6152253440), compute-name=) - Retrieving connection
+[0m17:43:32.964940 [debug] [Thread-1  ]: Using databricks connection "model.dbt_glow_demo.stg_products"
+[0m17:43:32.965290 [debug] [Thread-1  ]: On model.dbt_glow_demo.stg_products: /* {"app": "dbt", "dbt_version": "1.8.8", "dbt_databricks_version": "1.8.7", "databricks_sql_connector_version": "3.1.2", "profile_name": "dbt_glow_demo", "target_name": "dev", "node_id": "model.dbt_glow_demo.stg_products"} */
+create or replace view `datamass_unitycatalog_datalake`.`dbt`.`stg_products`
+  
+  
+  
+  as
+    -- models/staging/products/stg_products.sql
+WITH source_data AS (
+    SELECT *
+    FROM `datamass_unitycatalog_datalake`.`jaws_prod`.`bronze_products`
+)
+SELECT * FROM source_data
+
+[0m17:43:32.965661 [debug] [Thread-1  ]: Databricks adapter: Cursor(session-id=01ef9939-9827-126a-8b3f-8065d422aa70, command-id=Unknown) - Created cursor
+[0m17:43:34.106951 [debug] [Thread-1  ]: SQL status: OK in 1.140 seconds
+[0m17:43:34.110617 [debug] [Thread-1  ]: Databricks adapter: Cursor(session-id=01ef9939-9827-126a-8b3f-8065d422aa70, command-id=01ef9939-98f5-17f2-ba5b-2d0170bb3d48) - Closing cursor
+[0m17:43:34.142995 [debug] [Thread-1  ]: Databricks adapter: DatabricksDBTConnection(id=5137631792, session-id=01ef9939-9827-126a-8b3f-8065d422aa70, name=model.dbt_glow_demo.stg_products, idle-time=4.0531158447265625e-06s, acquire-count=0, language=sql, thread-identifier=(12888, 6152253440), compute-name=) - Released connection
+[0m17:43:34.143868 [debug] [Thread-1  ]: Databricks adapter: DatabricksDBTConnection(id=5137631792, session-id=01ef9939-9827-126a-8b3f-8065d422aa70, name=model.dbt_glow_demo.stg_products, idle-time=2.1457672119140625e-06s, acquire-count=0, language=sql, thread-identifier=(12888, 6152253440), compute-name=) - Released connection
+[0m17:43:34.145403 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '5030a1f8-906c-454f-b2a8-de978afecb03', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1320ec8e0>]}
+[0m17:43:34.146265 [info ] [Thread-1  ]: 1 of 1 OK created sql view model dbt.stg_products .............................. [[32mOK[0m in 1.22s]
+[0m17:43:34.147038 [debug] [Thread-1  ]: Finished running node model.dbt_glow_demo.stg_products
+[0m17:43:34.148313 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5137565488, session-id=None, name=master, idle-time=1.2332322597503662s, acquire-count=0, language=None, thread-identifier=(12888, 8471949888), compute-name=) - Checking idleness
+[0m17:43:34.148842 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5137565488, session-id=None, name=master, idle-time=1.2337942123413086s, acquire-count=0, language=None, thread-identifier=(12888, 8471949888), compute-name=) - Reusing connection previously named master
+[0m17:43:34.149275 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5137565488, session-id=None, name=master, idle-time=1.2342312335968018s, acquire-count=1, language=None, thread-identifier=(12888, 8471949888), compute-name=) - Acquired connection on thread (12888, 8471949888), using default compute resource
+[0m17:43:34.149702 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5137565488, session-id=None, name=master, idle-time=1.234666109085083s, acquire-count=1, language=None, thread-identifier=(12888, 8471949888), compute-name=) - Checking idleness
+[0m17:43:34.150105 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5137565488, session-id=None, name=master, idle-time=1.2350702285766602s, acquire-count=1, language=None, thread-identifier=(12888, 8471949888), compute-name=) - Retrieving connection
+[0m17:43:34.150489 [debug] [MainThread]: On master: ROLLBACK
+[0m17:43:34.150864 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:43:34.340372 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5137565488, session-id=01ef9939-99bd-1fd5-86ea-850215759189, name=master, idle-time=1.7881393432617188e-05s, acquire-count=1, language=None, thread-identifier=(12888, 8471949888), compute-name=) - Connection created
+[0m17:43:34.342457 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m17:43:34.344196 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5137565488, session-id=01ef9939-99bd-1fd5-86ea-850215759189, name=master, idle-time=0.004085063934326172s, acquire-count=1, language=None, thread-identifier=(12888, 8471949888), compute-name=) - Checking idleness
+[0m17:43:34.346148 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5137565488, session-id=01ef9939-99bd-1fd5-86ea-850215759189, name=master, idle-time=0.005884885787963867s, acquire-count=1, language=None, thread-identifier=(12888, 8471949888), compute-name=) - Retrieving connection
+[0m17:43:34.347602 [debug] [MainThread]: Spark adapter: NotImplemented: add_begin_query
+[0m17:43:34.348639 [debug] [MainThread]: Spark adapter: NotImplemented: commit
+[0m17:43:34.349607 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(id=5137565488, session-id=01ef9939-99bd-1fd5-86ea-850215759189, name=master, idle-time=5.0067901611328125e-06s, acquire-count=0, language=None, thread-identifier=(12888, 8471949888), compute-name=) - Released connection
+[0m17:43:34.350939 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:43:34.352029 [debug] [MainThread]: On master: ROLLBACK
+[0m17:43:34.353050 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m17:43:34.353917 [debug] [MainThread]: On master: Close
+[0m17:43:34.354921 [debug] [MainThread]: Databricks adapter: Connection(session-id=01ef9939-99bd-1fd5-86ea-850215759189) - Closing connection
+[0m17:43:34.437947 [debug] [MainThread]: Connection 'model.dbt_glow_demo.stg_products' was properly closed.
+[0m17:43:34.439873 [debug] [MainThread]: On model.dbt_glow_demo.stg_products: ROLLBACK
+[0m17:43:34.442041 [debug] [MainThread]: Databricks adapter: NotImplemented: rollback
+[0m17:43:34.443385 [debug] [MainThread]: On model.dbt_glow_demo.stg_products: Close
+[0m17:43:34.444304 [debug] [MainThread]: Databricks adapter: Connection(session-id=01ef9939-9827-126a-8b3f-8065d422aa70) - Closing connection
+[0m17:43:34.521137 [info ] [MainThread]: 
+[0m17:43:34.522440 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 3.10 seconds (3.10s).
+[0m17:43:34.523798 [debug] [MainThread]: Command end result
+[0m17:43:34.569570 [info ] [MainThread]: 
+[0m17:43:34.570109 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:43:34.570446 [info ] [MainThread]: 
+[0m17:43:34.570785 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m17:43:34.572748 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 4.0879474, "process_user_time": 2.990448, "process_kernel_time": 0.591347, "process_mem_max_rss": "204603392", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m17:43:34.573360 [debug] [MainThread]: Command `dbt run` succeeded at 17:43:34.573284 after 4.09 seconds
+[0m17:43:34.573820 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103e1e550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1320fc760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104165be0>]}
+[0m17:43:34.574258 [debug] [MainThread]: Flushing usage events
+[0m18:20:42.036477 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1043a64c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10637b430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10637b250>]}
+
+
+============================== 18:20:42.041557 | 38a8cf8c-8c55-4eec-9911-09f05c0e8736 ==============================
+[0m18:20:42.041557 [info ] [MainThread]: Running with dbt=1.8.8
+[0m18:20:42.042244 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/Users/kubaw/Documents/workspace-git/dbt_glow_demo/logs', 'fail_fast': 'False', 'profiles_dir': '/Users/kubaw/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt test', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m18:20:42.101981 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m18:20:42.102445 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m18:20:42.102734 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m18:20:42.996315 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '38a8cf8c-8c55-4eec-9911-09f05c0e8736', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106331dc0>]}
+[0m18:20:43.031847 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '38a8cf8c-8c55-4eec-9911-09f05c0e8736', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1061ea160>]}
+[0m18:20:43.032265 [info ] [MainThread]: Registered adapter: databricks=1.8.7
+[0m18:20:43.046895 [debug] [MainThread]: checksum: ec53e341a936509427e16df1c646386a84befec52c1957e3f4359fbc36fc93f5, vars: {}, profile: , target: , version: 1.8.8
+[0m18:20:43.147592 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:20:43.147948 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:20:43.168848 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '38a8cf8c-8c55-4eec-9911-09f05c0e8736', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1334c8130>]}
+[0m18:20:43.238836 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '38a8cf8c-8c55-4eec-9911-09f05c0e8736', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1336de820>]}
+[0m18:20:43.239189 [info ] [MainThread]: Found 1 model, 1 source, 596 macros
+[0m18:20:43.239442 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '38a8cf8c-8c55-4eec-9911-09f05c0e8736', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1334b4400>]}
+[0m18:20:43.240090 [info ] [MainThread]: 
+[0m18:20:43.240338 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m18:20:43.241318 [debug] [MainThread]: Command end result
+[0m18:20:43.260095 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 1.308909, "process_user_time": 3.090531, "process_kernel_time": 0.319171, "process_mem_max_rss": "199409664", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m18:20:43.260475 [debug] [MainThread]: Command `dbt test` succeeded at 18:20:43.260428 after 1.31 seconds
+[0m18:20:43.260744 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1043a64c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10474fd30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105d68550>]}
+[0m18:20:43.260993 [debug] [MainThread]: Flushing usage events
+[0m18:22:53.130718 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1044c9550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10649f8b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10649f6d0>]}
+
+
+============================== 18:22:53.133559 | e3150b48-881b-482f-bc56-ac64f13f3970 ==============================
+[0m18:22:53.133559 [info ] [MainThread]: Running with dbt=1.8.8
+[0m18:22:53.133971 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/Users/kubaw/.dbt', 'log_path': '/Users/kubaw/Documents/workspace-git/dbt_glow_demo/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt test', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m18:22:53.174745 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m18:22:53.175092 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m18:22:53.175336 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m18:22:53.945465 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e3150b48-881b-482f-bc56-ac64f13f3970', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106549220>]}
+[0m18:22:53.980909 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e3150b48-881b-482f-bc56-ac64f13f3970', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11cf05a00>]}
+[0m18:22:53.981322 [info ] [MainThread]: Registered adapter: databricks=1.8.7
+[0m18:22:53.995283 [debug] [MainThread]: checksum: ec53e341a936509427e16df1c646386a84befec52c1957e3f4359fbc36fc93f5, vars: {}, profile: , target: , version: 1.8.8
+[0m18:22:54.086288 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:22:54.086585 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:22:54.106822 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e3150b48-881b-482f-bc56-ac64f13f3970', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d8740d0>]}
+[0m18:22:54.176279 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e3150b48-881b-482f-bc56-ac64f13f3970', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1203faa00>]}
+[0m18:22:54.176640 [info ] [MainThread]: Found 1 model, 1 source, 596 macros
+[0m18:22:54.176889 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e3150b48-881b-482f-bc56-ac64f13f3970', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d158490>]}
+[0m18:22:54.177528 [info ] [MainThread]: 
+[0m18:22:54.177774 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m18:22:54.178736 [debug] [MainThread]: Command end result
+[0m18:22:54.197279 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 1.111225, "process_user_time": 3.043978, "process_kernel_time": 0.250464, "process_mem_max_rss": "199000064", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m18:22:54.197645 [debug] [MainThread]: Command `dbt test` succeeded at 18:22:54.197600 after 1.11 seconds
+[0m18:22:54.197911 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1044c9550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105e8c8e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11d158520>]}
+[0m18:22:54.198162 [debug] [MainThread]: Flushing usage events
+[0m18:23:25.014733 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104b2d4f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106b033d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106b031f0>]}
+
+
+============================== 18:23:25.017482 | de188bcc-4ea6-4b21-92e9-809597a65427 ==============================
+[0m18:23:25.017482 [info ] [MainThread]: Running with dbt=1.8.8
+[0m18:23:25.017907 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/Users/kubaw/Documents/workspace-git/dbt_glow_demo/logs', 'profiles_dir': '/Users/kubaw/.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt test', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m18:23:25.058556 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m18:23:25.058898 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m18:23:25.059142 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m18:23:25.811745 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'de188bcc-4ea6-4b21-92e9-809597a65427', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x130b7a4c0>]}
+[0m18:23:25.846639 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'de188bcc-4ea6-4b21-92e9-809597a65427', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1064f6190>]}
+[0m18:23:25.847042 [info ] [MainThread]: Registered adapter: databricks=1.8.7
+[0m18:23:25.860852 [debug] [MainThread]: checksum: ec53e341a936509427e16df1c646386a84befec52c1957e3f4359fbc36fc93f5, vars: {}, profile: , target: , version: 1.8.8
+[0m18:23:25.947773 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:23:25.948053 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:23:25.968149 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'de188bcc-4ea6-4b21-92e9-809597a65427', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1317d00d0>]}
+[0m18:23:26.038927 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'de188bcc-4ea6-4b21-92e9-809597a65427', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1321e8a90>]}
+[0m18:23:26.039273 [info ] [MainThread]: Found 1 model, 1 source, 596 macros
+[0m18:23:26.039520 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'de188bcc-4ea6-4b21-92e9-809597a65427', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105eebb50>]}
+[0m18:23:26.040152 [info ] [MainThread]: 
+[0m18:23:26.040400 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m18:23:26.041370 [debug] [MainThread]: Command end result
+[0m18:23:26.059979 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 1.0881164, "process_user_time": 3.02707, "process_kernel_time": 0.244356, "process_mem_max_rss": "198148096", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m18:23:26.060352 [debug] [MainThread]: Command `dbt test` succeeded at 18:23:26.060308 after 1.09 seconds
+[0m18:23:26.060618 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104b2d4f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1064f08e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1313fc430>]}
+[0m18:23:26.060872 [debug] [MainThread]: Flushing usage events
+[0m18:24:05.851006 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104b8d4f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e6f3d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106e6f1f0>]}
+
+
+============================== 18:24:05.853812 | 6c233800-a246-4131-bf20-3eedd1151982 ==============================
+[0m18:24:05.853812 [info ] [MainThread]: Running with dbt=1.8.8
+[0m18:24:05.854230 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/Users/kubaw/Documents/workspace-git/dbt_glow_demo/logs', 'version_check': 'True', 'profiles_dir': '/Users/kubaw/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt test', 'send_anonymous_usage_stats': 'True'}
+[0m18:24:05.895463 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m18:24:05.895790 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m18:24:05.896030 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m18:24:06.689282 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6c233800-a246-4131-bf20-3eedd1151982', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1422824c0>]}
+[0m18:24:06.724808 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6c233800-a246-4131-bf20-3eedd1151982', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106862190>]}
+[0m18:24:06.725197 [info ] [MainThread]: Registered adapter: databricks=1.8.7
+[0m18:24:06.739479 [debug] [MainThread]: checksum: ec53e341a936509427e16df1c646386a84befec52c1957e3f4359fbc36fc93f5, vars: {}, profile: , target: , version: 1.8.8
+[0m18:24:06.826928 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:24:06.827222 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:24:06.847483 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6c233800-a246-4131-bf20-3eedd1151982', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1428500d0>]}
+[0m18:24:06.917958 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6c233800-a246-4131-bf20-3eedd1151982', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1453b3a90>]}
+[0m18:24:06.918318 [info ] [MainThread]: Found 1 model, 1 source, 596 macros
+[0m18:24:06.918563 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6c233800-a246-4131-bf20-3eedd1151982', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106258b50>]}
+[0m18:24:06.919203 [info ] [MainThread]: 
+[0m18:24:06.919447 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m18:24:06.920406 [debug] [MainThread]: Command end result
+[0m18:24:06.939032 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 1.1308957, "process_user_time": 2.981745, "process_kernel_time": 0.287368, "process_mem_max_rss": "201605120", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m18:24:06.939415 [debug] [MainThread]: Command `dbt test` succeeded at 18:24:06.939368 after 1.13 seconds
+[0m18:24:06.939692 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104b8d4f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10685b8e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x142574430>]}
+[0m18:24:06.939945 [debug] [MainThread]: Flushing usage events
+[0m18:24:51.613965 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103e80520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105e57880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105e576a0>]}
+
+
+============================== 18:24:51.616852 | 0f22599c-1573-4c04-8c49-4bb978459ae6 ==============================
+[0m18:24:51.616852 [info ] [MainThread]: Running with dbt=1.8.8
+[0m18:24:51.617258 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/kubaw/.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/Users/kubaw/Documents/workspace-git/dbt_glow_demo/logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt test', 'send_anonymous_usage_stats': 'True'}
+[0m18:24:51.658429 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m18:24:51.658825 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m18:24:51.659092 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m18:24:52.495990 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0f22599c-1573-4c04-8c49-4bb978459ae6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1040dba90>]}
+[0m18:24:52.531807 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '0f22599c-1573-4c04-8c49-4bb978459ae6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105df27f0>]}
+[0m18:24:52.532244 [info ] [MainThread]: Registered adapter: databricks=1.8.7
+[0m18:24:52.546537 [debug] [MainThread]: checksum: ec53e341a936509427e16df1c646386a84befec52c1957e3f4359fbc36fc93f5, vars: {}, profile: , target: , version: 1.8.8
+[0m18:24:52.633811 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m18:24:52.634187 [debug] [MainThread]: Partial parsing: added file: dbt_glow_demo://tests/test_stg_products_latest.sql
+[0m18:24:52.717588 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.dbt_glow_demo.test_stg_products_latest' (tests/test_stg_products_latest.sql) depends on a node named 'stg_products_latest' in package '' which was not found
+[0m18:24:52.760744 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '0f22599c-1573-4c04-8c49-4bb978459ae6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1313539d0>]}
+[0m18:24:52.841022 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '0f22599c-1573-4c04-8c49-4bb978459ae6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1315758b0>]}
+[0m18:24:52.841439 [info ] [MainThread]: Found 1 model, 1 source, 596 macros
+[0m18:24:52.841713 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '0f22599c-1573-4c04-8c49-4bb978459ae6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x130698190>]}
+[0m18:24:52.842377 [info ] [MainThread]: 
+[0m18:24:52.842640 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m18:24:52.842965 [debug] [MainThread]: Command end result
+[0m18:24:52.861786 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 1.2913891, "process_user_time": 2.988428, "process_kernel_time": 0.284677, "process_mem_max_rss": "202457088", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m18:24:52.862186 [debug] [MainThread]: Command `dbt test` succeeded at 18:24:52.862140 after 1.29 seconds
+[0m18:24:52.862480 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103e80520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10584b700>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1040dba90>]}
+[0m18:24:52.862750 [debug] [MainThread]: Flushing usage events

@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: jaws
+    database: datamass_unitycatalog_datalake  # Specify the database (catalog) here
+    schema: jaws_prod                         # Specify the schema here
+    tables:
+      - name: bronze_products                 # Table name only, without the schema prefix

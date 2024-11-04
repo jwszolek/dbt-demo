@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: stg_products_latest
+    description: "Unit tests for the stg_products_latest model"
+    columns:
+      - name: name
+        tests:
+          - not_null  # Ensures the column is not null
+          - unique    # Ensures the column values are unique

@@ -1,0 +1,1 @@
+{"_invocation_id": "0f22599c-1573-4c04-8c49-4bb978459ae6", "linked": {"0": {"name": "source.dbt_glow_demo.jaws.bronze_products", "type": "source", "succ": [1]}, "1": {"name": "model.dbt_glow_demo.stg_products", "type": "model"}, "2": {"name": "test.dbt_glow_demo.test_stg_products_latest", "type": "test"}}}
